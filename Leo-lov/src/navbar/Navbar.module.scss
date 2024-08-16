@@ -1,0 +1,24 @@
+@import './../helper/Colors.scss';
+.NavStyle {
+    color: $MainColor;
+    display: flex;
+    flex-direction: row;
+    ul {
+        li{
+            list-style: none;
+            
+        }
+        hr {
+            position: absolute;
+            margin: -25px 0 0 60px;
+            border: none;
+            border-left: 1px solid $MainColor;
+            height: 30px;
+          }
+    }
+    h4{
+       right: 0;
+       position: absolute;
+       margin-right: 30px;
+    }
+}

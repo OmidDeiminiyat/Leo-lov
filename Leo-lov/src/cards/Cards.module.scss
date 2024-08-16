@@ -1,0 +1,31 @@
+@import './../helper/Colors.scss';
+@import './../helper/mixin.scss';
+
+.CardsStyle{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    height: 300px;
+    text-align: center;
+    margin-top: -90px;
+    position: relative;
+    z-index: 1000;
+    .DiVStyle{
+        width: 70%;
+        box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.75);
+        background-color: $light;
+        border-radius: 8px;
+        margin-left: 15%;
+        h1{
+            color: $MainColor;
+            font-family: "Jura", sans-serif;
+            font-weight: 400;
+            font-size: 32px;
+        }
+        p{
+           @include paraf($dark);
+           width: 80%;
+           margin-left: 10%;
+        }
+    }
+}
