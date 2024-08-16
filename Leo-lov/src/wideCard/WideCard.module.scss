@@ -1,0 +1,21 @@
+@import './../helper/Colors.scss';
+@import './../helper/mixin.scss';.WeidCard {
+    width: 84%;
+    margin-left: 8%;
+    margin-top: 60px;
+    border: 8px solid $cardBorder;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    img{
+        width: 100%;
+    }
+    .secondSection{
+        border: 8px solid $cardBorder;
+        text-align: center;
+        h1{
+            @include Head(30px);
+                
+            
+        }
+    }
+}
