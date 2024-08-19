@@ -1,0 +1,37 @@
+@import './../helper/Colors.scss';
+@import './../helper/mixin.scss';
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: $cardBorder;
+    
+    div{
+        text-align: center;
+       h1{
+        @include Head(32px);
+        color: white;
+       }
+       p{
+        @include paraf;
+       }
+    }
+    .image1{
+        img{
+            position: absolute;
+            left: 80%;
+            margin-top: -80px;
+            width: 40px;
+            height: 40px;
+        }
+    }
+    .image2{
+        img{
+            position: absolute;
+            left: 84%;
+            margin-top: -80px;
+            width: 40px;
+            height: 40px;
+        }
+    }
+}

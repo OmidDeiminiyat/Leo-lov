@@ -13,6 +13,7 @@ import {SecondCard} from './SecondWideCard/SecondCard';
  import Image4 from './assets/Staff/no4.jpeg'
  import Map from  './map/Map';
  import Location from './assets/leolov-location.png';
+ import Footers from './footer/Footer';
 
 import './App.css'
 
@@ -49,6 +50,13 @@ function App() {
    const [LocationText] = useState('Vi har valgt at bosætte os i solen! Her er dejlig varmt og ikke ret mange fattige mennesker. Det nyder vi rigtig meget. Hvis du har råd til at tage til Sechellerne har du råd til os”. Det er et af vores utallige motto er');
    const [Addrese] = useState('Leo-Lov ApS Maldive rd. 22 Seychelles');
 
+   const FooterItems = [
+    {h1: 'Adresse', paraf: 'Find os her:', secondParaf: 'Maldive rd 22,', SecondBreak: 'Seyschelle eslands'},
+    {h1: 'Kontakt', paraf: 'Kontakt os her', secondParaf: 'email@mail.dk', SecondBreak: 'Tif: 09123023'},
+    {h1: 'Politik', paraf: 'Vores politikker:', secondParaf: 'Privalivspolitik', SecondBreak: 'CookiePolitik'},
+    {h1: 'Sociale medier'}
+   ]
+
   return (
     <>
       <Navigation menuItems={name} />  
@@ -58,6 +66,7 @@ function App() {
        <SecondCard title={SecondCardT} subsOne={SecondCardSub} subsTwo={SecondCardSubTW} img={SecNImage}/>
        <Staff StaffList={staffs}/>
        <Map maps={MyMap} Title={LocationTitle} Paraf={LocationText} Address={Addrese}  />
+       <Footers FooterData={FooterItems} />
     </>
   )
 }
