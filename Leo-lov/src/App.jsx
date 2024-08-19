@@ -4,6 +4,15 @@ import Header from './header/Header';
 import React, { useState } from 'react';
 import FirstCard from './wideCard/WideCard';
 import MyImg from './assets/No1.jpeg';
+import {SecondCard} from './SecondWideCard/SecondCard';
+ import SecondImg from './assets/No2.jpeg';
+ import Staff from './Staff/Staff';
+ import Image1 from './assets/Staff/no1.jpeg'
+ import Image2 from './assets/Staff/no2.jpeg'
+ import Image3 from './assets/Staff/no3.jpeg'
+ import Image4 from './assets/Staff/no4.jpeg'
+ import Map from  './map/Map';
+ import Location from './assets/leolov-location.png';
 
 import './App.css'
 
@@ -23,12 +32,32 @@ function App() {
   const [CardSubOne]  = useState('Leo-lov har altid været det bedste advokatfirma i verden. Der er simpelthen ingen der kan måle sig med os. Vi kan løse alle problemer så længe du har penge. Hvis du mod alt forventning skulle oplevel at støde på et retsligt problem som leo-lov ikke kan løse får du halvdelen af beløbet igen.');
   const [CardSubsTwo] = useState('Det er sådan vi har skabt en forretning der ikke kan andet end at vokse!');
 
+   const SecNImage = SecondImg;
+   const [SecondCardT] = useState('Intet Problem');
+   const [SecondCardSub]  = useState('Leo-lov har altid været det bedste advokatfirma i verden. Der er simpelthen ingen der kan måle sig med os. Vi kan løse alle problemer så længe du har penge. Hvis du mod alt forventning skulle oplevel at støde på et retsligt problem som leo-lov ikke kan løse får du halvdelen af beløbet igen.');
+   const [SecondCardSubTW] = useState('Det er sådan vi har skabt en forretning der ikke kan andet end at vokse!');
+
+   const staffs = [
+    {image: Image1, name: 'John Harbinger', Describe: 'Jeg er den mest successfulde advokat i firmaet. I hvert fald mere end Peter.'},
+    {image: Image2, name: 'Peter Parker', Describe: 'Jeg holder af kaffe og så er jeg helt enormt succesfuld. Meget mere end John'},
+    {image: Image3, name: 'Elise Li', Describe: 'Uden ret og lov, kunne vi ligeså godt bo i en skov. Sådan har jeg altid sagt'},
+    {image: Image4, name: 'Morten Nate', Describe: 'Jeg er født på landet. På landet er der ingen ret og lov. Det er det vilde vest derude.'}
+   ]
+
+   const MyMap = Location;
+   const [LocationTitle] = useState('Her bo vi');
+   const [LocationText] = useState('Vi har valgt at bosætte os i solen! Her er dejlig varmt og ikke ret mange fattige mennesker. Det nyder vi rigtig meget. Hvis du har råd til at tage til Sechellerne har du råd til os”. Det er et af vores utallige motto er');
+   const [Addrese] = useState('Leo-Lov ApS Maldive rd. 22 Seychelles');
+
   return (
     <>
       <Navigation menuItems={name} />  
       <Header Title={title} SecTit={SecondTitle} Subtitle={subtitle} />
       <MyCards CardItems={CardData} />
       <FirstCard image={Mimg} tit={CardTit} sub1={CardSubOne} sub2={CardSubsTwo}/>
+       <SecondCard title={SecondCardT} subsOne={SecondCardSub} subsTwo={SecondCardSubTW} img={SecNImage}/>
+       <Staff StaffList={staffs}/>
+       <Map maps={MyMap} Title={LocationTitle} Paraf={LocationText} Address={Addrese}  />
     </>
   )
 }

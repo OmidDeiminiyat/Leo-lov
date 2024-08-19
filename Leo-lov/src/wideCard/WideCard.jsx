@@ -1,4 +1,5 @@
 import style from './WideCard.module.scss';
+
 export const FirstCard = ({image, tit, sub1, sub2}) => {
 return(
     <>
