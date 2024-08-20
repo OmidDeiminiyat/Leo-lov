@@ -1,6 +1,6 @@
 import style from './Footer.module.scss';
-import icone from './../assets/icone/facebook.png';
-import iconeTwo from './../assets/icone/message.png';
+import icone from './../assets/icone/Vector.svg';
+import iconeTwo from './../assets/icone/Vector-1.svg';
 const Footers = ({FooterData}) => {
     return (
         <footer className={style.footer}>
@@ -15,11 +15,7 @@ const Footers = ({FooterData}) => {
     )
             })}
             <span className={style.image1}><img src={icone} alt="" /></span>
-           <span className={style.image2}><img src={iconeTwo} alt="" /></span>
-            
-           
-      
-            
+           <span className={style.image2}><img src={iconeTwo} alt="" /></span>     
         </footer>
     )
 }

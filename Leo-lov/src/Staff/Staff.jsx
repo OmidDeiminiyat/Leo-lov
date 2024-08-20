@@ -2,8 +2,8 @@ import style from './Staff.module.scss';
 const Staff = ({StaffList}) => {
 return (
     
-    <div>
-        <h1>MØD HOLDET</h1>
+    <div id='about'>
+        <h1 className={style.myh1} >MØD HOLDET</h1>
         <section className={style.AllStaf}>
        { StaffList.map((items, index) => {
         return (

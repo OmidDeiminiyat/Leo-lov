@@ -2,7 +2,7 @@ import style from './Cards.module.scss';
 export const MyCards = ({CardItems}) => {
     return (
         <>
-        <section className={style.CardsStyle}>
+        <section className={style.CardsStyle} id='home'>
         {CardItems.map((items, index) => {
             return (
             <div className={style.DiVStyle} key={index}>

@@ -7,6 +7,14 @@
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    @media(max-width:600px) {
+        display: flex;
+        flex-direction: column;
+    }
+    @media only screen and (min-width:600px) and (max-width:1024px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 .cards{
     text-align: center;
@@ -34,7 +42,11 @@
     }
 }
 
-h1{
+.myh1{
     @include Head(48px);
     text-align: center;
+    @media(max-width:600px){
+        margin-top: 330px;
+    }
+
 }

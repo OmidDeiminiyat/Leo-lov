@@ -6,6 +6,10 @@
     grid-template-columns: repeat(4, 1fr);
     background-color: $cardBorder;
     margin-top: 30px;
+    @media(max-width: 600px){
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+    }
     div{
         text-align: center;
        h1{
@@ -23,6 +27,12 @@
             margin-top: -80px;
             width: 40px;
             height: 40px;
+            @media(max-width:600px) {
+                left: 60%;
+            }
+            @media only screen and (min-width:600px) and (max-width:1024px) {
+                left: 78%;
+            }
         }
     }
     .image2{
@@ -32,6 +42,9 @@
             margin-top: -80px;
             width: 40px;
             height: 40px;
+            @media(max-width:600px) {
+                left: 73%;
+            }
         }
     }
 }

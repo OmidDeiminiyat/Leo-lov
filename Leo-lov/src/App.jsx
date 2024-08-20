@@ -15,10 +15,16 @@ import {SecondCard} from './SecondWideCard/SecondCard';
  import Location from './assets/leolov-location.png';
  import Footers from './footer/Footer';
 
-import './App.css'
+ import './App.css'
 
 function App() {
-  const name = ['Hjem', 'Advocat', 'Om os', 'Kontakt os'];
+  const MyLinks = [
+    {first: 'index.html#home', second: 'Hjem'},
+    {first: 'index.html#Advocat', second: 'Advocat'},
+    {first: 'index.html#about', second: 'Om os'},
+    {first: 'index.html#contact', second: 'Kontakt os'}
+  ];
+  // const name = ['Hjem', 'Advocat', 'Om os', 'Kontakt os'];
   const [title] = useState('Leo');
   const [SecondTitle] = useState('-Lov');
   const [subtitle] = useState('Lov og ret kan være et plaster! Hvis du ellers har knaster!');
@@ -59,7 +65,7 @@ function App() {
 
   return (
     <>
-      <Navigation menuItems={name} />  
+      <Navigation menuItems={MyLinks} />  
       <Header Title={title} SecTit={SecondTitle} Subtitle={subtitle} />
       <MyCards CardItems={CardData} />
       <FirstCard image={Mimg} tit={CardTit} sub1={CardSubOne} sub2={CardSubsTwo}/>

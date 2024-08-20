@@ -2,7 +2,7 @@ import style from './Map.module.scss';
 const Map = ({maps, Title, Paraf, Address}) => {
     return (
         <>
-        <section className={style.WeidCard}>
+        <section className={style.WeidCard} id='contact'>
                  <img src={maps} alt="" />
                     <div className={style.secondSection}>
                         <h1>{Title}</h1>

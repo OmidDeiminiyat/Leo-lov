@@ -3,7 +3,7 @@ import style from './WideCard.module.scss';
 export const FirstCard = ({image, tit, sub1, sub2}) => {
 return(
     <>
-    <section className={style.WeidCard}>
+    <section className={style.WeidCard} id='Advocat'>
              <img src={image} alt="" />
                 <div className={style.secondSection}>
                     <h1>{tit}</h1>

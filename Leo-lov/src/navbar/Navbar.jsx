@@ -1,12 +1,13 @@
 import Style from './Navbar.module.scss';
  const Navigation = ({menuItems}) => {
+    
     return (
         <>
         <nav className={Style.NavStyle}>
         {menuItems.map((items, index) => {
             return(
             <ul key={index}>
-                <li>{items} </li>
+                <li><a href={items.first}> {items.second}</a> </li>
                 {index < menuItems.length - 1 && <hr />}
             </ul>
             )
