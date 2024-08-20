@@ -6,6 +6,10 @@ body{
     color: $MainColor;
     display: flex;
     flex-direction: row;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
     @media(max-width:600px) {
         max-width: 100%;
     }
