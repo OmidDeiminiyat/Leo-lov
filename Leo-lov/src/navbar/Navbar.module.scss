@@ -2,6 +2,7 @@
 body{
     max-width: 100%;
 }
+
 .NavStyle {
     color: $MainColor;
     display: flex;
@@ -10,22 +11,23 @@ body{
     position: fixed;
     width: 100%;
     z-index: 999;
-    @media(max-width:600px) {
-        max-width: 100%;
-    }
+
+     @media(max-width:600px) {
+    //     max-width: 100%;
+        display: none;
+     }
+
     ul {
-        @media(max-width:600px) {
-            padding: 0 0 0 21px ;
-            
-        }
+
         li{
             list-style: none;
             font-size: 12px;
             @media only screen and (min-width: 600px) and (max-width: 1024px) {
-                font-size: 30px;
+               
             }
            a{
             text-decoration: none;
+            color: $MainColor;
            }
         }
         hr {
@@ -34,11 +36,12 @@ body{
             border: none;
             border-left: 1px solid $MainColor;
             height: 30px;
-            @media(max-width:600px){
-                display: none;
+            @media(max-width:600px) {
+              
             }
+
             @media only screen and (min-width: 600px) and (max-width: 1024px) {
-               display: none;
+               
             }
           }
     }
@@ -47,8 +50,56 @@ body{
        position: absolute;
        margin-right: 30px;
        @media only screen and (min-width: 600px) and (max-width: 1024px) {
-        font-size: 30px;
+
         margin-top: 18px;
      }
+     @media(max-width:600px) {
+        
+     }
     }
+}
+
+@media (max-width:600px) {
+.NavMob{
+    position: absolute;
+    background-color: rgba(242, 237, 237, 0.903);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    ul{
+        li{
+            list-style: none;
+            a{
+                color: $MainColor;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+        hr{
+            width: 80%;
+            margin-left: 0;
+        }
+    }
+    h4{
+        right: 0;
+        margin-left: 300px;
+        color: $MainColor;
+        @media only screen and (min-width: 600px) and (max-width: 1024px) {
+         font-size: 30px;
+         margin-top: 18px;
+      }
+    }
+    }
+    .close{
+        position: absolute;
+        top: 10px;
+        left: 90%;
+        font-size: 21px;
+        cursor: pointer;
+    }
+}
+.mobileMenu{
+    position: fixed;
+   margin-left: 89%;
+    color: white;
 }
