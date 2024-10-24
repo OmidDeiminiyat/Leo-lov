@@ -1,5 +1,4 @@
 import Style from './Navbar.module.scss';
-import MenuIcon from '@mui/icons-material/Menu';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import React, { useState } from 'react';
  const Navigation = ({menuItems}) => {
@@ -30,7 +29,7 @@ import React, { useState } from 'react';
             <h4>Leo-Lov</h4>
             <div className={Style.close} onClick={() => setIsOpen(!isOpen)} ><MenuOpenIcon/> </div>
         </nav>
-        <span id="myDiv" style={{ display: isOpen ? 'none' : 'block' }} className={Style.mobileMenu} onClick={() => setIsOpen(!isOpen)}><MenuIcon/></span>
+        <span id="myDiv" style={{ display: isOpen ? 'none' : 'block' }} className={Style.mobileMenu} onClick={() => setIsOpen(!isOpen)}></span>
         </>
     );
 };
