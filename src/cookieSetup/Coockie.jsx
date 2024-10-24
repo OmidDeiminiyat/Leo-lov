@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
+import style from './cookie.module.scss';
 
-const App = () => {
+const Cookie = () => {
   const [cookieConsent, setCookieConsent] = useState(Cookies.get('cookieConsent'));
   const [analyticsEnabled, setAnalyticsEnabled] = useState(false);
 
   useEffect(() => {
-    // Check if user has previously accepted the cookie consent
     if (cookieConsent === 'accepted') {
       enableGoogleAnalytics();
     } else {
@@ -14,24 +14,19 @@ const App = () => {
     }
   }, [cookieConsent]);
 
-  // Enable Google Analytics tracking
   const enableGoogleAnalytics = () => {
     setAnalyticsEnabled(true);
-    // Initialize or load Google Analytics here (you can paste your Google Analytics code)
     console.log('Google Analytics Enabled');
     window.dataLayer = window.dataLayer || [];
     function gtag() { window.dataLayer.push(arguments); }
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX'); 
+    gtag('config', 'G-XHG58XMGTD'); 
   };
 
-  // Disable Google Analytics tracking
   const disableGoogleAnalytics = () => {
     setAnalyticsEnabled(false);
     console.log('Google Analytics Disabled');
-    // Optionally remove any Google Analytics script from the DOM
-    // Prevent analytics events from being sent
-    window['ga-disable-G-XXXXXXXXXX'] = true; // Replace with your GA Measurement ID
+    window['G-XHG58XMGTD'] = true; 
   };
 
   const handleAccept = () => {
@@ -45,9 +40,7 @@ const App = () => {
   };
 
   return (
-    <div>
-      <h1>React App with Cookie Consent for Google Analytics</h1>
-
+    <div className={style.Cookie} >
       {!cookieConsent && (
         <div className="cookie-consent">
           <p>We use cookies to improve your experience. Do you accept the use of cookies for analytics?</p>
@@ -67,4 +60,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Cookie;

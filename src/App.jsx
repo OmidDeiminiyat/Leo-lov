@@ -14,6 +14,7 @@ import {SecondCard} from './SecondWideCard/SecondCard';
  import Map from  './map/Map';
  import Location from './assets/leolov-location.png';
  import Footers from './footer/Footer';
+ import Cookie from './cookieSetup/Coockie';
 
  import './App.css'
 
@@ -73,6 +74,7 @@ function App() {
        <Staff StaffList={staffs}/>
        <Map maps={MyMap} Title={LocationTitle} Paraf={LocationText} Address={Addrese}  />
        <Footers FooterData={FooterItems} />
+       <Cookie/>
     </>
   )
 }
