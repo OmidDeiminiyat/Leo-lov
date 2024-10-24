@@ -1,6 +1,6 @@
 import style from './Footer.module.scss';
-import icone from './../assets/icone/Vector.svg';
-import iconeTwo from './../assets/icone/Vector-1.svg';
+import icone from '../assets/icone/Vector.svg';
+import iconeTwo from '../assets/icone/Vector-1.svg';
 const Footers = ({FooterData}) => {
     return (
         <footer className={style.footer}>

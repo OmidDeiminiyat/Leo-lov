@@ -1,7 +1,8 @@
-Opsætning: Jeg initialiserede et nyt "React-projekt" ved hjælp af: npx create-react-app.
-Navbar & Header: Jeg skabte "Navbar og Header"-komponenter til navigation og introduktionsindhold.
-Cards: Jeg oprettede 2 "Card" komponenter, begge er de samme, bare jeg skiftede billede og tekst.
-Staff: Inde i en ny mappe "Staff" opretter jeg en komponent, der repræsenterer 4 medarbejdere.
-About us and Map: Oprettet jeg en "About Us"-komponent, der inkluderer et kort.
-Footer: Og til sidst Oprettet jeg en "Footer"-komponent med relevant info.
-Jeg samlede disse komponenter i "App.js" og stylet dem med "Sass".
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
