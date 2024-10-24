@@ -1,4 +1,4 @@
-@import './lins.scss';
+@use './lins.scss' as *;
 
 @mixin paraf($colored: white){
     font-family: "Inter", sans-serif;
